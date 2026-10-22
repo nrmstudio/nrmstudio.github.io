@@ -1,1 +1,193 @@
-<h1>NRM Studio</h1><p>Games by NRM Studio. Contact: namanmaurya9411@gmail.com</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NRM Studio – Mobile Games from Delhi</title>
+<meta name="description" content="NRM Studio makes fun, fast mobile games with an Indian flavour. Play Jantar Mantar Rush on Google Play.">
+<meta property="og:title" content="NRM Studio – Mobile Games from Delhi">
+<meta property="og:description" content="Fun, fast mobile games with an Indian flavour. Play Jantar Mantar Rush on Google Play.">
+<meta property="og:image" content="https://nrmstudio.github.io/img/jmr-banner.jpg">
+<link rel="icon" href="img/jmr-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--tape:#FFC727;--asphalt:#1C1E23;--asphalt2:#25282F;--red:#D7263D;--blue:#1F4FA8;--chalk:#FFF8EC;--muted:#B9BCC4;--line:rgba(255,255,255,.08)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--asphalt);color:var(--chalk);font-family:"Baloo 2",system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.tape{height:14px;background:repeating-linear-gradient(-45deg,var(--tape) 0 16px,#111 16px 32px)}
+.display{font-family:Bangers,Impact,sans-serif;letter-spacing:1.5px;font-weight:400;line-height:1}
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(28,30,35,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{background:var(--red);color:#fff;font-family:Bangers,sans-serif;font-size:22px;letter-spacing:1px;padding:2px 10px;border-radius:8px;border:2px solid var(--tape);transform:rotate(-3deg)}
+.logo span{font-weight:800;font-size:18px}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:700}
+nav ul a:hover{color:var(--tape)}
+/* hero */
+.hero{padding:72px 0 56px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:-40% -10% auto auto;width:640px;height:640px;background:radial-gradient(circle,rgba(255,199,39,.18),transparent 65%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.kicker{display:inline-block;background:var(--tape);color:#111;font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:3px 12px;border-radius:999px}
+.hero h1{font-size:clamp(46px,7vw,84px);margin:18px 0 12px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--tape)}
+.hero p{color:var(--muted);font-size:19px;max-width:520px;margin:0 0 26px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;border-radius:14px;padding:12px 22px;border:3px solid #111;box-shadow:0 5px 0 #111;transition:transform .1s,box-shadow .1s}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 #111}
+.btn.primary{background:var(--tape);color:#111}
+.btn.ghost{background:transparent;border-color:var(--line);box-shadow:none;color:var(--chalk)}
+.btn svg{width:22px;height:22px}
+.hero-art{position:relative}
+.hero-art img{width:100%;height:auto;border-radius:22px;border:3px solid #111;box-shadow:0 18px 50px rgba(0,0,0,.5);display:block;transform:rotate(1.5deg)}
+.hero-art .badge{position:absolute;left:-14px;bottom:-16px;background:var(--red);color:#fff;font-family:Bangers,sans-serif;font-size:24px;letter-spacing:1px;padding:6px 16px;border-radius:12px;border:3px solid #111;transform:rotate(-4deg)}
+/* sections */
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(34px,5vw,52px);margin:0 0 8px;color:#fff}
+.sub{color:var(--muted);margin:0 0 32px;max-width:640px}
+/* game card */
+.game{display:grid;grid-template-columns:auto 1fr;gap:28px;background:var(--asphalt2);border:1px solid var(--line);border-radius:24px;padding:28px}
+.game .icon{width:128px;height:128px;border-radius:28px;border:3px solid #111;box-shadow:0 6px 0 #111}
+.game h3{margin:0;font-size:38px;color:var(--tape)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.tags span{font-size:13px;font-weight:700;color:var(--chalk);background:rgba(255,255,255,.07);border:1px solid var(--line);padding:2px 10px;border-radius:999px}
+.feat{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 22px;margin:0 0 20px;padding:0;list-style:none;color:var(--muted)}
+.feat li:before{content:"★ ";color:var(--tape)}
+.shots{display:flex;gap:14px;overflow-x:auto;padding:26px 2px 8px;scroll-snap-type:x mandatory}
+.shots img{height:360px;width:auto;border-radius:18px;border:3px solid #111;scroll-snap-align:start;flex:0 0 auto}
+.soon{margin-top:22px;border:2px dashed rgba(255,199,39,.4);border-radius:20px;padding:22px;text-align:center;color:var(--muted)}
+.soon b{display:block;font-family:Bangers,sans-serif;font-size:28px;letter-spacing:1px;color:var(--tape);font-weight:400}
+/* about */
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:var(--asphalt2);border:1px solid var(--line);border-radius:20px;padding:22px}
+.card i{display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:14px;background:rgba(255,199,39,.14);color:var(--tape);font-style:normal;font-size:24px;margin-bottom:10px}
+.card h4{margin:0 0 4px;font-size:20px;color:#fff}
+.card p{margin:0;color:var(--muted)}
+/* contact */
+.contact{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px;background:linear-gradient(135deg,var(--blue),#163a7e);border-radius:24px;padding:32px;border:3px solid #111}
+.contact h2{font-size:40px}
+.contact p{margin:0;color:#dbe4ff}
+footer{padding:28px 0 40px;color:var(--muted);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{color:var(--muted)}
+@media (max-width:820px){
+  nav ul{display:none}
+  .hero{padding:40px 0}
+  .hero .wrap{grid-template-columns:1fr}
+  .game{grid-template-columns:1fr}
+  .feat{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .shots img{height:300px}
+}
+</style>
+</head>
+<body>
+<div class="tape"></div>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#"><b>NRM</b><span>Studio</span></a>
+    <ul><li><a href="#games">Games</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Indie game studio · Delhi, India</span>
+      <h1 class="display">Fun games with a <em>desi</em> twist</h1>
+      <p>NRM Studio makes fast, colourful mobile games inspired by the streets, people and energy of India. Easy to pick up, hard to put down.</p>
+      <div class="btns">
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.techdevrit.jantarmantarrush" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8 1 .6l15.6-9.2c.4-.3.4-.9 0-1.2L5 2.2c-.5-.2-1 .1-1 .6z"/></svg>
+          Get it on Google Play
+        </a>
+        <a class="btn ghost" href="#games">See our games</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="img/jmr-banner.jpg" alt="Jantar Mantar Rush game banner" width="1024" height="500">
+      <div class="badge">Now on Google Play!</div>
+    </div>
+  </div>
+</header>
+
+<section id="games">
+  <div class="wrap">
+    <h2 class="display">Our games</h2>
+    <p class="sub">Made with love in Delhi. Free to play on Android.</p>
+
+    <article class="game">
+      <img class="icon" src="img/jmr-icon.png" alt="Jantar Mantar Rush icon" width="128" height="128">
+      <div>
+        <h3 class="display">Jantar Mantar Rush</h3>
+        <div class="tags"><span>Endless runner</span><span>Action</span><span>Casual</span><span>Offline</span><span>Free</span></div>
+        <p>Run through the busy streets of Delhi, from Karol Bagh all the way to Jantar Mantar! Swipe to dodge barricades, vans, autos and tear gas, and outrun the police in this fast 3D runner.</p>
+        <ul class="feat">
+          <li>250 levels across 10 Delhi areas</li>
+          <li>Endless mode – how far can you run?</li>
+          <li>10+ fun characters to unlock</li>
+          <li>Its own music for every area</li>
+          <li>Power-ups, coins and chai shields</li>
+          <li>Plays offline, anywhere</li>
+        </ul>
+        <div class="btns">
+          <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.techdevrit.jantarmantarrush" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 2.8v18.4c0 .5.5.8 1 .6l15.6-9.2c.4-.3.4-.9 0-1.2L5 2.2c-.5-.2-1 .1-1 .6z"/></svg>
+            Download free
+          </a>
+          <a class="btn ghost" href="privacy.html">Privacy policy</a>
+        </div>
+      </div>
+    </article>
+
+    <div class="shots" aria-label="Jantar Mantar Rush screenshots">
+      <img src="img/jmr-shot1.jpg" alt="Home screen" loading="lazy" width="432" height="768">
+      <img src="img/jmr-shot2.jpg" alt="Running through Delhi" loading="lazy" width="432" height="768">
+      <img src="img/jmr-shot3.jpg" alt="Night level" loading="lazy" width="432" height="768">
+      <img src="img/jmr-shot4.jpg" alt="Revive screen" loading="lazy" width="432" height="768">
+      <img src="img/jmr-shot5.jpg" alt="Characters" loading="lazy" width="432" height="768">
+    </div>
+
+    <div class="soon"><b>More games coming soon</b>We're working on new puzzle and runner games. Stay tuned!</div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="display">About NRM Studio</h2>
+    <p class="sub">We are a small, independent game studio from Delhi. We build games that feel familiar to Indian players – our streets, our music, our humour – and are fun for everyone.</p>
+    <div class="grid3">
+      <div class="card"><i>⚡</i><h4>Quick fun</h4><p>Short, satisfying sessions you can play anytime, even offline.</p></div>
+      <div class="card"><i>🇮🇳</i><h4>Made in India</h4><p>Original characters, places and music inspired by everyday India.</p></div>
+      <div class="card"><i>🔒</i><h4>Player first</h4><p>No sign-up needed. We respect your privacy and keep ads fair.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2 class="display">Say hello</h2>
+        <p>Feedback, bug reports or business enquiries – we read every email.</p>
+      </div>
+      <a class="btn primary" href="mailto:namanmaurya9411@gmail.com">✉ namanmaurya9411@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> NRM Studio · Delhi, India</span>
+    <span><a href="privacy.html">Privacy policy</a> · <a href="app-ads.txt">app-ads.txt</a></span>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+</body>
+</html>
